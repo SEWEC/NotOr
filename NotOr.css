@@ -1,0 +1,347 @@
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 20px;
+}
+#circuitSpace {
+    text-align: center;
+}
+
+.wire {
+    position: relative;
+    width: 36em;
+    height: 36em;
+    background-color: cornsilk;
+}
+
+.wire.off > * {
+    background-color: #065535;
+}
+
+.wire.on > * {
+    background-color: #5AC18E;
+}
+
+.center {
+    position: absolute;
+    top: 11em;
+    left: 11em;
+    width: 12em;
+    height: 12em;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1em;
+    border-color: #333;
+}
+
+.center.lr {
+    top: 14em;
+    left: 0em;
+    width: 36em;
+    height: 6em;
+    border-radius: 0%;
+    border-top-width: 1em;
+    border-bottom-width: 1em;
+    border-left-width: 0em;
+    border-right-width: 0em;
+}
+
+.center.tb {
+    left: 14em;
+    top: 0em;
+    width: 6em;
+    height: 36em;
+    border-radius: 0%;
+    border-top-width: 0em;
+    border-bottom-width: 0em;
+    border-left-width: 1em;
+    border-right-width: 1em;
+}
+
+.center.tb.shadow {  
+    box-shadow: 2em 0em 3em -1em rgba(0,0,0,.3);
+}
+
+.top.show {
+    position: absolute;
+    left: 14em;
+    width: 6em;
+    height: 13em;
+    z-index: 1;
+    border: solid black;
+    border-width: 0em 1em 0em 1em;
+
+}
+
+.top.hide {
+    background-color: transparent;
+}
+
+.bottom.show {
+    position: absolute;
+    left: 14em;
+    bottom: 0em;
+    width: 6em;
+    height: 13em;
+    z-index: 1;
+    border: solid #333;
+    border-width: 0em 1em 0em 1em;
+
+}
+
+.bottom.hide {
+    background-color: transparent;
+}
+
+
+.left.show {
+    position: absolute;
+    left: 0em;
+    top: 14em;
+    width: 13em;
+    height: 6em;
+    z-index: 1;
+    border: solid #333;
+    border-width: 1em 0em 1em 0em;
+
+}
+
+.bottom.hide {
+    background-color: transparent;
+}
+
+.right.show {
+    position: absolute;
+    right: 0em;
+    top: 14em;
+    width: 13em;
+    height: 6em;
+    z-index: 1;
+    border: solid #333;
+    border-width: 1em 0em 1em 0em;
+
+}
+
+.right.hide {
+    background-color: transparent;
+}
+
+.bridge {
+    position: relative;
+    width: 36em;
+    height: 36em;
+    background-color: cornsilk;
+}
+
+.bon {
+    background-color: #5AC18E;
+}
+
+.boff {
+    background-color: #065535;
+}
+
+.not {
+    position: relative;
+    width: 36em;
+    height: 36em;
+    background-color: cornsilk;
+}
+
+.not.down > .notExterior {
+    position: absolute;
+    width: 8em;
+    height: 0em;
+    border-left: 14em solid transparent;
+    border-right: 14em solid transparent;
+    border-top: 36em solid #333;
+}
+
+.not.down > .notInterior {
+    left: 9em;
+    bottom: 0em;
+    position: absolute;
+    width: 6em;
+    height: 0em;
+    border-left: 6em solid transparent;
+    border-right: 6em solid transparent;
+}
+
+.not.up.on > .notInterior{
+    border-top: 27em solid #5AC18E;
+}
+
+.not.up.off > .notInterior{
+    border-top: 27em solid #065535;
+}
+
+.not.left > .notExterior {
+    position: absolute;
+    width: 0em;
+    height: 8em;
+    border-bottom: 14em solid transparent;
+    border-top: 14em solid transparent;
+    border-right: 36em solid #333;
+}
+
+.not.left > .notInterior {
+    left: 0em;
+    bottom: 9em;
+    position: absolute;
+    width: 0em;
+    height: 6em;
+    border-bottom: 6em solid transparent;
+    border-top: 6em solid transparent;
+}
+
+.not.left.on > .notInterior{
+    border-right: 27em solid #5AC18E;
+}
+
+.not.left.off > .notInterior{
+    border-right: 27em solid #065535;
+}
+
+
+.not.right > .notExterior {
+    position: absolute;
+    width: 0em;
+    height: 8em;
+    border-bottom: 14em solid transparent;
+    border-top: 14em solid transparent;
+    border-left: 36em solid #333;
+}
+
+.not.right > .notInterior {
+    right: 0em;
+    bottom: 9em;
+    position: absolute;
+    width: 0em;
+    height: 6em;
+    border-bottom: 6em solid transparent;
+    border-top: 6em solid transparent;
+}
+
+.not.right.on > .notInterior{
+    border-left: 27em solid #5AC18E;
+}
+
+.not.right.off > .notInterior{
+    border-left: 27em solid #065535;
+}
+
+.not.up > .notExterior {
+    position: absolute;
+    width: 8em;
+    height: 0em;
+    border-left: 14em solid transparent;
+    border-right: 14em solid transparent;
+    border-bottom: 36em solid #333;
+}
+
+.not.up > .notInterior {
+    left: 9em;
+    top: 0em;
+    position: absolute;
+    width: 6em;
+    height: 0em;
+    border-left: 6em solid transparent;
+    border-right: 6em solid transparent;
+}
+
+.not.up.on > .notInterior{
+    border-bottom: 27em solid #5AC18E;
+}
+
+.not.up.off > .notInterior{
+    border-bottom: 27em solid #065535;
+}
+
+.cover {
+    position: relative;
+    width: 36em;
+    height: 36em;
+    background-color: #333;
+}
+
+.switch {
+    width: 36em;
+    height: 36em;
+    position: relative;
+}
+
+.switch.on {
+    background-color: #5AC18E;
+}
+
+.switch.off {
+    background-color: #065535;
+}
+
+.block {
+    position: absolute;
+    left: 3em;
+    top: 3em;
+    width: 30em;
+    height: 30em;
+    background-color: #333;
+}
+
+.circle {
+    position: absolute;
+    height: 4em;
+    width: 4em;
+    top: 16em;
+    left: 5em;
+    background-color: rgb(150, 7, 35);
+    border-radius: 50%;
+}
+
+.arrow {
+    position: absolute;
+    height: 17em;
+    width: 2em;
+    left: 13em;
+    background-color: rgb(150, 7, 35);
+}
+
+.switch.on > .arrow {
+    top: 6em;
+    rotate: 65deg;
+}
+
+.switch.off > .arrow {
+    top: 13em;
+    rotate: 115deg;
+}
+
+.one {
+    position: absolute;
+    height: 6em;
+    width: 2em;
+    background-color: cornsilk;
+    top: 6em;
+    right: 8em;
+}
+
+.zero {
+    position: absolute;
+    height: 6em;
+    width: 6em;
+    background-color: cornsilk;
+    border-radius: 50%;
+    bottom: 6em;
+    right: 6em;
+}
+
+.innerZero {
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    background-color: #333;
+    border-radius: 50%;
+    top: 1.5em;
+    left: 1.5em;
+}

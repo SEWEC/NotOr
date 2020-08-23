@@ -1,12 +1,15 @@
+html{
+    cursor: grab;
+    overflow: auto;
+    background-color: cornsilk;
+}
+
 body {
     font-family: sans-serif;
 }
 
 h1 {
-    font-size: 20px;
-}
-#circuitSpace {
-    text-align: center;
+    font-size: 24em;
 }
 
 .wire {
@@ -144,6 +147,8 @@ h1 {
 }
 
 .not {
+    grid-row: 50;
+    grid-column: 50;
     position: relative;
     width: 36em;
     height: 36em;
@@ -169,11 +174,11 @@ h1 {
     border-right: 6em solid transparent;
 }
 
-.not.up.on > .notInterior{
+.not.down.on > .notInterior{
     border-top: 27em solid #5AC18E;
 }
 
-.not.up.off > .notInterior{
+.not.down.off > .notInterior{
     border-top: 27em solid #065535;
 }
 
@@ -264,6 +269,7 @@ h1 {
     width: 36em;
     height: 36em;
     background-color: #333;
+    z-index: 5;
 }
 
 .switch {
@@ -294,7 +300,7 @@ h1 {
     height: 4em;
     width: 4em;
     top: 16em;
-    left: 5em;
+    left: 6em;
     background-color: rgb(150, 7, 35);
     border-radius: 50%;
 }
@@ -309,12 +315,12 @@ h1 {
 
 .switch.on > .arrow {
     top: 6em;
-    rotate: 65deg;
+    rotate: 60deg;
 }
 
 .switch.off > .arrow {
     top: 13em;
-    rotate: 115deg;
+    rotate: 120deg;
 }
 
 .one {
@@ -344,4 +350,166 @@ h1 {
     border-radius: 50%;
     top: 1.5em;
     left: 1.5em;
+}
+
+.move {
+    position: relative;
+    height: 36em;
+    width: 36em;
+    background-color: #333;
+}
+
+#ugly {
+    position: relative;
+    top: 10em;
+    left: 10em;
+    height: 16em;
+    width: 16em;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#circuit {
+    cursor: grab;
+    top: 30em;
+    left: -6em;
+    height: 1800em;
+    width: 1800em;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(50, 36em);
+    grid-template-rows: repeat(50, 36em);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    cursor: auto;
+    position: fixed;
+    height: 36em;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    color: white;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 14em;
+    position: relative;
+    left: 10px;
+}
+
+h2 {
+    position: relative;
+    top: -.3em;
+    font-size: 10em;
+}
+
+h3 {
+    position: relative;
+    top: -.5em;
+    font-size: 8em;
+}
+
+#elements{
+    width: 400em;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 6em;
+    right: 18em;
+}
+
+#miniMap {
+    height: 150em;
+    width: 150em;
+    position: fixed;
+    right: 14em;
+    bottom: 14em;
+    border: solid black 1em;
+    background-color: cornsilk;
+    opacity: .5;
+    z-index: 7;
+}
+
+.elementContainer {
+    padding: 2em;
+    border: solid 1em transparent;
+    cursor: pointer;
+    width: 50em;
+    height: 18em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mini {
+    position: fixed;
+    height: 3em;
+    width: 3em;
+    background-color: #333;
+    z-index: 10;
+}
+
+switch.on > .mini {
+    background-color: #5AC18E;
+}
+
+switch.off > .mini {
+    background-color: #065535;
+}
+
+.on > .mini {
+    background-color: #5AC18E;
+}
+
+.off > .mini {
+    background-color: #065535;
+    
+}
+
+.bon > .mini {
+    background-color: #5AC18E;
+}
+
+.boff > .mini {
+    background-color: #065535;
+    
+}
+
+@media only screen and (max-width: 900px) {
+    h2{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 825px) {
+    #NotOr{
+        color: transparent;
+    }
+}
+
+#save {
+    cursor: pointer;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -1.25em;
+    background-color: #065535;
+    text-align: center;
+    padding-top: 0em;
+    padding-left: .25em;
+    padding-right: .25em;
+    padding-bottom: 0em;
+    border-radius: .25em;
+}
+
+#save:hover {
+    background-color: #5AC18E;
+}
+
+#save:active {
+    box-shadow: 0px 0px 3px 1px black inset;
 }

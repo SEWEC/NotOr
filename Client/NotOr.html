@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html id="html" lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="NotOr.css"></link>
+        <script src="NotOr.js"></script>
+    </head>
+    <body>
+        <title id="test">
+            NotOr
+        </title>
+        <header>
+            <h1 id = "NotOr">NotOr</h1>
+            <div id="elements">
+                <h2>Elements:</h2>
+                <div id="switch" onclick = "selected('switch')" class = "elementContainer" style="width: 48em;">
+                    <h3>Switch</h3>
+                    <div class="switch off" style="font-size: .5em;">
+                        <div class="block">
+                        </div>
+                        <div class="circle">
+                        </div>
+                        <div class="arrow">
+                        </div>
+                        <div class="one">
+                        </div>
+                        <div class="zero">
+                            <div class="innerZero"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="wire" onclick = "selected('wire')" class = "elementContainer" style="width: 39em;">
+                    <h3>Wire</h3>
+                    <div class="wire on" style="font-size: .5em;">
+                        <div class="center">
+                        </div>
+                        <div class="top show">
+                        </div>
+                        <div class="right show">
+                        </div>
+                        <div class="bottom show">
+                        </div>
+                        <div class="left show">
+                        </div>
+                    </div>
+                </div>
+                <div id="not" onclick = "selected('not')" class = "elementContainer" style="width: 35em;">
+                    <h3>Not</h3>
+                    <div class="not right on" style="font-size: .5em;">
+                        <div class="notExterior">
+                        </div>
+                        <div class="notInterior">
+                        </div>
+                    </div>
+                </div>
+                <div id="bridge" onclick = "selected('bridge')" class = "elementContainer" style="width: 47em;">
+                    <h3>Bridge</h3>
+                    <div class="bridge" style="font-size: .5em;">
+                        <div class="center lr bon">
+                        </div>
+                        <div class="center tb shadow bon">
+                        </div>
+                    </div>
+                </div>
+                <div id="cover" onclick = "selected('cover')" class = "elementContainer" style="width: 46em;">
+                    <h3>Cover</h3>
+                    <div class="cover" style="font-size: .5em; border: solid 1em white;">
+                    </div>
+                </div>
+                <div id="clear" onclick = "selected('clear')" class = "elementContainer" style="width: 42em;">
+                    <h3>Clear</h3>
+                    <div class="cover" style="font-size: .5em; background-color: cornsilk;">
+                    </div>
+                </div>
+                <div id="move" onclick = "selected('move')" class = "elementContainer" style="width: 39em;">
+                    <h3>Move</h3>
+                    <div class="move" style="font-size: .5em;">
+                        <div id="ugly">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1 onclick = "save()" id="save">Save</h1>
+        </header>
+        <div id="miniMap">
+        </div>
+    </body>
+</html>

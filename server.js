@@ -5,7 +5,7 @@ var path = require( 'path' );
 const bodyParser = require('body-parser'); 
 var fs = require('fs');
 
-var pword = "ZQhyTiLkWNwxMNoh";
+var pword = "";
 
 var connectionString = "mongodb+srv://me:" + pword + "@cluster0.0tcu1.azure.mongodb.net/saves?retryWrites=true&w=majority"
 
